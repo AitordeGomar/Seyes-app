@@ -1,0 +1,18 @@
+* {
+  display: block;
+  justify-content: center;
+  margin: 5px auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+form {
+  border: 1px solid black;
+  width: 50vw;
+}
+
+button {
+  width: 25vw;
+  height: 30px;
+  text-transform: uppercase;
+}

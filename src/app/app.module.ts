@@ -1,18 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { UserlistService } from './services/userlist.service';
+import {QuestionsService} from './services/questions.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'signup', component: LoginComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: '**', redirectTo: 'home', pathMatch: 'full' },
+    ]),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserlistService, QuestionsService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

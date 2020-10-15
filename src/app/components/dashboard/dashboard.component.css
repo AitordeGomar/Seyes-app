@@ -1,0 +1,60 @@
+*{
+    margin:0 auto;
+    box-sizing:border-box;
+}
+
+.nav {
+  border: 1px solid black;
+  width: calc(100vw - 30vw);
+  display: inline-block;
+}
+h1 {
+  text-align: center;
+  width: 50vw;
+}
+
+.nav div {
+  display: inline-block;
+  margin: 3px;
+  border: 1px solid black;
+  text-align: center;
+  width: auto;
+}
+
+.search {
+  float: right;
+  width: calc(100vw-70vw);
+}
+
+.search input{
+    width: calc(30vw - 60px);
+}
+
+button{
+    width:60px;
+}
+
+button#logout{
+    width:auto;
+}
+
+#question{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnQuestion{
+    display:inline-block;
+    
+}
+
+
+#logout {
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  line-break:auto;
+}
