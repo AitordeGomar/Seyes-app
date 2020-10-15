@@ -13,12 +13,14 @@ export class DashboardComponent implements OnInit {
   question: string;
   rand: number;
   btnQuestion = document.getElementsByClassName('btnQuestion');
+  i = 0;
+
 
   constructor(private router: Router, private questions: QuestionsService) {}
 
   ngOnInit(): void {
     for (
-      this.i = 0;
+      this.i;
       this.i <= this.questions.getQuestions().length - 1;
       this.i++
     ) {
@@ -28,27 +30,24 @@ export class DashboardComponent implements OnInit {
       Math.random() * (this.questions.getQuestions().length - 1)
     );
     this.question = this.questionsArray[this.rand];
-    console.log('El array es ' + this.questionsArray.length);
-    console.log('rand es ' + this.rand);
   }
 
-  i = 0;
+  
 
   logout() {
     this.router.navigate(['home']);
   }
   click() {
     this.questionsArray.splice(this.rand, 1);
-    console.log('despues de click el array es ' + this.questionsArray.length);
+
     this.rand = Math.round(Math.random() * (this.questionsArray.length - 1));
     if (this.questionsArray.length == 0) {
       this.question = 'No more questions';
     } else {
       this.question = this.questionsArray[this.rand];
     }
-    // console.log(this.rand);
-    console.log('Despues de click el array es ' + this.questionsArray);
-    console.log('rand es ' + this.rand);
-    console.log(this.btnQuestion);
+  }
+  clSearch(){
+    this.router.navigate(['search']);
   }
 }

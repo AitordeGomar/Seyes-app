@@ -8,17 +8,38 @@ import { UserlistService } from '../../services/userlist.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  testUser = '';
-  i = 0;
+  currentUser: String = '';
+  userList = [];
+  userPassword: String;
 
   constructor(private router: Router, private users: UserlistService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    for (this.i; this.i <= this.users.userInfo().length - 1; this.i++) {
+      this.userList.push(this.users.userInfo()[this.i].username);
+    }
+    console.log(this.userList);
+  }
+  i = 0;
 
   login() {
-    this.router.navigate(['dashboard']);
+    for (this.i = 0; this.i <= this.userList.length - 1; this.i++) {
+      if (this.currentUser != this.userList[this.i]) {
+        if (this.i >= this.userList.length - 1 || this.currentUser == '') {
+          alert('User not registered. Please sign up instead');
+          break;
+        }
+      } else {
+        if (this.userPassword != this.users.userInfo()[this.i].password) {
+          alert('Wrong password. Please try again');
+          break;
+        } else {
+          this.router.navigate(['dashboard']);
+          break;
+        }
+      }
+    }
   }
-
   signup() {
     this.router.navigate(['signup']);
   }

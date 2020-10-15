@@ -1,10 +1,12 @@
 <form>
     <label>Username</label>
-    <input id='currentUser'type="text" [(ngModel)]='testUser' [ngModelOptions]="{standalone: true}" required autofocus>
+    <input id='currentUser'type="text" [(ngModel)]='currentUser' [ngModelOptions]="{standalone: true}" required placeholder='guest' autofocus>
     <label>Password</label>
-    <input type="password" required>
+    <input type="password" [(ngModel)]='userPassword' [ngModelOptions]="{standalone: true}" required placeholder='guest'>
     <!-- <button type="submit" (submit)='login()'>Log in</button> Submit button-->
     <button type="submit" (click)='login()'>Log in</button>
     <a>Don't you have an account?</a>
     <button type="button" (click)='signup()'>Sign up now</button>
   </form>
+
+  <div>Try username: guest and password: guest</div>
