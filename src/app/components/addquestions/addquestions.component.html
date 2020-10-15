@@ -1,0 +1,6 @@
+<form>
+    <label>New Question</label>
+    <input type="text" placeholder='football'/>
+    <button (click)="questionSent()">Send your question</button>
+    <p id='notification' [className]="buttonClicked ? 'show' : 'hidden'">Your question has been sent. We need to validate it so it can take some time to be used</p>
+</form>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuestionsService } from '../../services/questions.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,7 @@ import { QuestionsService } from '../../services/questions.service';
 })
 export class DashboardComponent implements OnInit {
   questionsArray = [];
-
+  hideIt = true;
   question: string;
   rand: number;
   btnQuestion = document.getElementsByClassName('btnQuestion');
@@ -42,12 +43,16 @@ export class DashboardComponent implements OnInit {
 
     this.rand = Math.round(Math.random() * (this.questionsArray.length - 1));
     if (this.questionsArray.length == 0) {
-      this.question = 'No more questions';
+      this.hideIt = false;
     } else {
       this.question = this.questionsArray[this.rand];
     }
   }
   clSearch(){
     this.router.navigate(['search']);
+  }
+
+  clAddQuestion(){
+    this.router.navigate(['add-questions'])
   }
 }

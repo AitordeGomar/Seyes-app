@@ -1,0 +1,16 @@
+#notification{
+    border:3px solid black;
+    /* display:none; */
+    /* display:flex; */
+    justify-content: center;
+    width:50vw;
+    z-index:1;
+}
+
+.show{
+    display:flex;
+}
+
+.hidden{
+    display:none;
+}

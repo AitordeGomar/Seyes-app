@@ -3,6 +3,10 @@
     box-sizing:border-box;
 }
 
+#dashboard{
+  height:800px
+}
+
 .nav {
   border: 1px solid black;
   width: calc(100vw - 30vw);
@@ -11,6 +15,7 @@
 h1 {
   text-align: center;
   width: 50vw;
+  line-break: strict;
 }
 
 .nav div {
@@ -38,10 +43,31 @@ button#logout{
     width:auto;
 }
 
+button#btnAdd{
+  border-radius:50%;
+  position: fixed;
+  top:calc(100vh - 10vw);
+  right:0;
+  height:50px;
+  width:50px;
+}
+
 #question{
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+#question::before{
+  content:'Do you like\00a0';
+}
+
+#question::after{
+  content:'?'
+}
+
+#elseBlock{
+  text-align:center;
 }
 
 .btnQuestion{

@@ -1,19 +1,39 @@
-<div class="nav">
-  <div>lorem</div>
-  <div>lorem</div>
-  <div>lorem</div>
-</div>
-<div class="search">
-  <input type="text" placeholder="What are you searching?" />
-  <button (click)='clSearch()'>Search</button>
-</div>
+<div id="dashboard">
+  <div class="nav">
+    <div>lorem</div>
+    <div>lorem</div>
+    <div>lorem</div>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="What are you searching?" />
+    <button (click)="clSearch()">Search</button>
+  </div>
 
-<h1>Welcome <span></span>, ready for some questions?</h1>
+  <h1>Welcome <span></span>, ready for some questions?</h1>
 
-<div>
-    <div id="question" >{{question}}</div>
-    <button class='btnQuestion' (click)='click()'[ngClass]="{'hidden': this.questionsArray.length == 0}">Yes</button>
-    <button class='btnQuestion' (click)='click()'[ngClass]="{'hidden': this.questionsArray.length == 0}">No</button>
+  <div>
+    <div id="question" *ngIf="hideIt; else elseBlock">
+      {{ question }}
+    </div>
+    <ng-template #elseBlock>
+      <div id="elseBlock">No more questions</div>
+    </ng-template>
+    <button
+      class="btnQuestion"
+      (click)="click()"
+      [ngClass]="{ hidden: this.questionsArray.length == 0 }"
+    >
+      Yes
+    </button>
+    <button
+      class="btnQuestion"
+      (click)="click()"
+      [ngClass]="{ hidden: this.questionsArray.length == 0 }"
+    >
+      No
+    </button>
+  </div>
+
+  <button id="logout" (click)="logout()">Log out</button>
+  <button id="btnAdd" (click)='clAddQuestion()'>+</button>
 </div>
-
-<button id="logout" (click)="logout()">Log out</button>
