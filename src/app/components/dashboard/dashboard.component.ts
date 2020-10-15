@@ -36,12 +36,12 @@ export class DashboardComponent implements OnInit {
   }
   click() {
 
-    this.questionsArray.splice(this.rand-1, this.rand-1);
+    this.questionsArray.splice(this.rand-1, this.rand);
     this.rand = Math.round(
       Math.random() * (this.questions.getQuestions().length - 1)
     );
     this.question = this.questionsArray[this.rand];
     // console.log(this.rand);
-    // console.log(this.questionsArray);
+    console.log(this.questionsArray);
   }
 }
