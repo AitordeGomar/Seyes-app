@@ -58,3 +58,7 @@ button#logout{
   margin: 5px;
   line-break:auto;
 }
+
+.hidden{
+  visibility: hidden;
+}

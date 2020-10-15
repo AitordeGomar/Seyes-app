@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
   question: string;
   rand: number;
+  btnQuestion = document.getElementsByClassName('btnQuestion');
 
   constructor(private router: Router, private questions: QuestionsService) {}
 
@@ -27,6 +28,8 @@ export class DashboardComponent implements OnInit {
       Math.random() * (this.questions.getQuestions().length - 1)
     );
     this.question = this.questionsArray[this.rand];
+    console.log('El array es ' + this.questionsArray.length);
+    console.log('rand es ' + this.rand);
   }
 
   i = 0;
@@ -35,13 +38,17 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['home']);
   }
   click() {
-
-    this.questionsArray.splice(this.rand-1, this.rand);
-    this.rand = Math.round(
-      Math.random() * (this.questions.getQuestions().length - 1)
-    );
-    this.question = this.questionsArray[this.rand];
+    this.questionsArray.splice(this.rand, 1);
+    console.log('despues de click el array es ' + this.questionsArray.length);
+    this.rand = Math.round(Math.random() * (this.questionsArray.length - 1));
+    if (this.questionsArray.length == 0) {
+      this.question = 'No more questions';
+    } else {
+      this.question = this.questionsArray[this.rand];
+    }
     // console.log(this.rand);
-    console.log(this.questionsArray);
+    console.log('Despues de click el array es ' + this.questionsArray);
+    console.log('rand es ' + this.rand);
+    console.log(this.btnQuestion);
   }
 }

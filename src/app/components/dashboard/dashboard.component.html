@@ -11,9 +11,9 @@
 <h1>Welcome <span></span>, ready for some questions?</h1>
 
 <div>
-    <div id="question">{{question}}</div>
-    <button class='btnQuestion' (click)='click()'>Yes</button>
-    <button class='btnQuestion' (click)='click()'>No</button>
+    <div id="question" >{{question}}</div>
+    <button class='btnQuestion' (click)='click()'[ngClass]="{'hidden': this.questionsArray.length == 0}">Yes</button>
+    <button class='btnQuestion' (click)='click()'[ngClass]="{'hidden': this.questionsArray.length == 0}">No</button>
 </div>
 
 <button id="logout" (click)="logout()">Log out</button>
