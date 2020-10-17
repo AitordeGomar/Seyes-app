@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { QuestionsService } from '../../services/questions.service';
-
+import { UserlistService } from '../../services/userlist.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,26 +14,53 @@ export class DashboardComponent implements OnInit {
   question: string;
   rand: number;
   btnQuestion = document.getElementsByClassName('btnQuestion');
-  i = 0;
+  iQuestion = 0;
+  iUser = 0;
+  username: string;
+  userList = [];
+  notAuthenticated: boolean = true;
 
-
-  constructor(private router: Router, private questions: QuestionsService) {}
+  constructor(
+    private router: Router,
+    private questions: QuestionsService,
+    private actRoute: ActivatedRoute,
+    private users: UserlistService
+  ) {}
 
   ngOnInit(): void {
-    for (
-      this.i;
-      this.i <= this.questions.getQuestions().length - 1;
-      this.i++
-    ) {
-      this.questionsArray.push(this.questions.getQuestions()[this.i].question);
+    for (this.iUser; this.iUser <= this.users.userInfo().length - 1; this.iUser++) {
+      this.userList.push(this.users.userInfo()[this.iUser].username);
+    }
+    for (this.iQuestion; this.iQuestion <= this.questions.getQuestions().length - 1; this.iQuestion++) {
+      this.questionsArray.push(this.questions.getQuestions()[this.iQuestion].question);
     }
     this.rand = Math.round(
       Math.random() * (this.questions.getQuestions().length - 1)
     );
     this.question = this.questionsArray[this.rand];
+    this.username = this.actRoute.snapshot.params['username'];
+
+    for (this.iUser = 0; this.iUser <= this.userList.length - 1; this.iUser++) {
+      if (this.username != this.userList[this.iUser] && this.username !== '**') {
+        if (this.iUser >= this.userList.length - 1 || this.username == '') {
+          this.notAuthenticated = true;
+          this.router.navigate(['home']);
+          break;
+        }
+        {
+          continue;
+        }
+      } else {
+        this.notAuthenticated = false;
+        this.router.navigate([this.username, 'dashboard']);
+        break;
+      }
+    }
   }
 
-  
+  clUserList() {
+    this.router.navigate([this.username, 'userlist']);
+  }
 
   logout() {
     this.router.navigate(['home']);
@@ -47,12 +74,13 @@ export class DashboardComponent implements OnInit {
     } else {
       this.question = this.questionsArray[this.rand];
     }
+    console.log(this.questionsArray);
   }
-  clSearch(){
-    this.router.navigate(['search']);
+  clSearch() {
+    this.router.navigate([this.username, 'search']);
   }
 
-  clAddQuestion(){
-    this.router.navigate(['add-questions'])
+  clAddQuestion() {
+    this.router.navigate([this.username, 'add-questions']);
   }
 }

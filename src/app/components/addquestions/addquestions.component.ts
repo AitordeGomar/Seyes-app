@@ -1,27 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import{Router} from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-addquestions',
   templateUrl: './addquestions.component.html',
-  styleUrls: ['./addquestions.component.css']
+  styleUrls: ['./addquestions.component.css'],
 })
 export class AddquestionsComponent implements OnInit {
-buttonClicked:boolean = false;
-  constructor(private router:Router) { }
+  buttonClicked: boolean = false;
+  username: string;
+  // input = document.getElementsByTagName[0].value;
+  input: undefined;
+  constructor(private router: Router, private actRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.username = this.actRoute.snapshot.params['username'];
   }
 
-
-  questionSent(){
+  questionSent() {
     // alert('Your question has been sent');
-    this.buttonClicked = true;
-    setTimeout(
-      ()=>{
+    if (this.input == undefined) {
+      alert('You need to write a question');
+    } else {
+      this.buttonClicked = true;
+      setTimeout(() => {
         this.buttonClicked = false;
-        this.router.navigate(['dashboard']);
-      }
-      ,3000)
+        this.router.navigate([this.username, 'dashboard']);
+      }, 3000);
+    }
   }
 }

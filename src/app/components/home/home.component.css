@@ -12,11 +12,20 @@
   }
   
   button {
-    width: 25vw;
-    height: 30px;
+    width: 70%;
+    height: auto;
     text-transform: uppercase;
+  }
+
+  input{
+    width:80%;
   }
 
   a{
       margin-top:15px;
+  }
+
+  code{
+    display: inline-block;
+    font-weight: 900;
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserlistService } from '../../services/userlist.service';
+import { UsersModel } from '../../services/interfaces/users.model';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +9,10 @@ import { UserlistService } from '../../services/userlist.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  newUser: String;
-  newEmail: String;
-  newPassword: String;
-  confirmPassword: String;
+  newUser: string;
+  newEmail: string;
+  newPassword: string;
+  confirmPassword: string;
 
   users: {};
   constructor(private router: Router, private usersService: UserlistService) {}
@@ -21,17 +22,23 @@ export class LoginComponent implements OnInit {
   }
 
   clDash() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['**/dashboard']);
   }
 
   signup() {
     this.newUser = document.getElementsByTagName('input')[0].value;
-  this.newEmail = document.getElementsByTagName('input')[1].value;
-  this.newPassword = document.getElementsByTagName('input')[2].value;
-  this.confirmPassword = document.getElementsByTagName('input')[3].value;
-    if (this.newUser == '' ||this.newEmail == '' || this.newPassword == '' || this.confirmPassword == '' || this.newPassword != this.confirmPassword) {
+    this.newEmail = document.getElementsByTagName('input')[1].value;
+    this.newPassword = document.getElementsByTagName('input')[2].value;
+    this.confirmPassword = document.getElementsByTagName('input')[3].value;
+    if (
+      this.newUser == '' ||
+      this.newEmail == '' ||
+      this.newPassword == '' ||
+      this.confirmPassword == '' ||
+      this.newPassword != this.confirmPassword
+    ) {
       alert('Not registered. Please try again');
-    }else{
+    } else {
       alert('Registered. You will be sent back to the main page');
       this.router.navigate(['home']);
     }

@@ -11,6 +11,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchComponent } from './components/search/search.component';
+import { AddquestionsComponent } from './components/addquestions/addquestions.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
+    SearchComponent,
+    AddquestionsComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'signup', component: LoginComponent },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: ':username/dashboard', component: DashboardComponent },
+      {path:':username/search',component:SearchComponent},
+      {path:':username/add-questions',component:AddquestionsComponent},
+      {path:':username/userlist', component:UserListComponent},
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]),
   ],

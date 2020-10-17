@@ -1,4 +1,43 @@
+
+
+.bck-one{
+  background: #dec5e3ff;
+}
+.cl-one{
+  color: #dec5e3ff;
+}
+
+.bck-two{
+  background: #717568;
+}
+.cl-two{
+  color: #717568;
+}
+
+.bck-three{
+  background: #F6CA83;
+}
+.cl-three{
+  color: #F6CA83;
+}
+
+.bck-four{
+  background: #a9f8fbff;
+}
+.cl-four{
+  color: #a9f8fbff;
+}
+
+.bck-five{
+  background: #81f7e5ff;
+}
+.cl-five{
+  color: #81f7e5ff;
+}
+
 * {
   margin: 0 auto;
   box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
 }
+

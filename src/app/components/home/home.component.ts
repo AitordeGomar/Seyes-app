@@ -8,7 +8,7 @@ import { UserlistService } from '../../services/userlist.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  currentUser: String = '';
+  username: String = '';
   userList = [];
   userPassword: String;
 
@@ -18,14 +18,13 @@ export class HomeComponent implements OnInit {
     for (this.i; this.i <= this.users.userInfo().length - 1; this.i++) {
       this.userList.push(this.users.userInfo()[this.i].username);
     }
-    console.log(this.userList);
   }
   i = 0;
 
   login() {
     for (this.i = 0; this.i <= this.userList.length - 1; this.i++) {
-      if (this.currentUser != this.userList[this.i]) {
-        if (this.i >= this.userList.length - 1 || this.currentUser == '') {
+      if (this.username != this.userList[this.i]) {
+        if (this.i >= this.userList.length - 1 || this.username == '') {
           alert('User not registered. Please sign up instead');
           break;
         }
@@ -34,7 +33,7 @@ export class HomeComponent implements OnInit {
           alert('Wrong password. Please try again');
           break;
         } else {
-          this.router.navigate(['dashboard']);
+          this.router.navigate([this.username,'dashboard']);
           break;
         }
       }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -7,14 +7,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
-  constructor(private router:Router) { }
+username:string;
+  constructor(private router:Router,private actRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.username = this.actRoute.snapshot.params['username'];
   }
 
   clDash(){
-    this.router.navigate(['dashboard']);
+    this.router.navigate([this.username, 'dashboard']);
   }
 
 }

@@ -9,7 +9,7 @@
 
 .nav {
   border: 1px solid black;
-  width: calc(100vw - 30vw);
+  width: calc(100vw - 33vw);
   display: inline-block;
 }
 h1 {
@@ -26,13 +26,18 @@ h1 {
   width: auto;
 }
 
+.nav div:hover{
+  background-color: red;
+  cursor:pointer;
+}
+
 .search {
   float: right;
-  width: calc(100vw-70vw);
+  width: calc(100vw - 73vw);
 }
 
 .search input{
-    width: calc(30vw - 60px);
+    width: 20vw;
 }
 
 button{

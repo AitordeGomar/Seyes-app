@@ -9,9 +9,10 @@ export class QuestionsService {
 
   getQuestions(){
     return [
-      {id:0, question: 'Do you like sports?'},
-      {id:1, question: 'Do you like coding?'},
-      {id:2, question: 'Do you like reading?'}
+      {id:0, question: 'sports'},
+      {id:1, question: 'coding'},
+      {id:2, question: 'reading'},
+      {id:3, question:'Harry Potter'}
     ]
   }
 }

@@ -4,11 +4,35 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserlistService {
+
   constructor() {}
 
   userInfo() {
     return [
-      { username: 'aitor' },
+      {
+        id:1,
+        username: 'guest',
+        password: 'guest',
+        email: '',
+        friends: [],
+        likes: [],
+      },
+      {
+        id:2,
+        username: 'aitor',
+        password: 'aitor',
+        email: '',
+        friends: [],
+        likes: [],
+      },
+      {
+        id:3,
+        username: 'sylwina',
+        password: 'sylwina92',
+        email: '',
+        friends: [],
+        likes: [],
+      },
     ];
   }
 }
