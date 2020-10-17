@@ -7,6 +7,10 @@
     z-index:1;
 }
 
+#add-questions{
+    min-height:600px;
+}
+
 .show{
     display:flex;
 }

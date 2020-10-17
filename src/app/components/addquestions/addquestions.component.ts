@@ -10,7 +10,7 @@ export class AddquestionsComponent implements OnInit {
   buttonClicked: boolean = false;
   username: string;
   // input = document.getElementsByTagName[0].value;
-  input: undefined;
+  input= undefined;
   constructor(private router: Router, private actRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -28,5 +28,8 @@ export class AddquestionsComponent implements OnInit {
         this.router.navigate([this.username, 'dashboard']);
       }, 3000);
     }
+  }
+  clDash(){
+    this.router.navigate([this.username , 'dashboard'])
   }
 }

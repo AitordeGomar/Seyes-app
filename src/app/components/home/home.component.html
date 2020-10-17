@@ -1,3 +1,4 @@
+<div id='home'>
 <form>
     <label>Username</label>
     <input id='currentUser'type="text" [(ngModel)]='username' [ngModelOptions]="{standalone: true}" required placeholder='guest' autofocus>
@@ -8,9 +9,25 @@
     <a>Don't you have an account?</a>
     <button type="button" (click)='signup()'>Sign up now</button>
   </form>
-
+  <div id='noSignup'>
   <div style='text-decoration: underline;'>Dont you want to sign in?</div>
   <p>username: <code>guest</code></p><p> password: <code>guest</code></p>
+</div>
 
+  <div id=carrousel></div>
+
+  <div id='carrousel-description' class='hidden'>
+    <img id='picOne' src='../../../assets/images/home/carrousel1.jpeg' alt="" srcset="">
+    <p style='margin-right: 10vw;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi, quas culpa rerum provident dolorum veniam odit iure sed iusto reiciendis nostrum laborum fugit, cum assumenda id doloribus distinctio quae commodi odio deleniti maiores asperiores in. Et eum rem, sapiente tenetur velit molestiae, saepe, obcaecati ad ducimus sint veritatis. Tempore!</p>
+    <br/>
+    <img id='picTwo' src='../../../assets/images/home/carrousel2.jpeg' alt="" srcset="">
+    <p style='margin-left: 10vw;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore ipsam! Veniam, voluptatum, maxime ex vel nulla ducimus tempore perferendis id perspiciatis libero, earum fugiat dolorum debitis. Modi, molestias! Provident quasi exercitationem inventore excepturi quod ipsa consequatur dolore minima deserunt nisi beatae dignissimos, quibusdam repellendus! Nesciunt quae praesentium rerum alias?</p>
+    <br/>
+    <img id='picThree'  src='../../../assets/images/home/carrousel3.jpeg' alt="" srcset="">
+    <p style='margin-right: 10vw;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore ipsam! Veniam, voluptatum, maxime ex vel nulla ducimus tempore perferendis id perspiciatis libero, earum fugiat dolorum debitis. Modi, molestias! Provident quasi exercitationem inventore excepturi quod ipsa consequatur dolore minima deserunt nisi beatae dignissimos, quibusdam repellendus! Nesciunt quae praesentium rerum alias?</p>
+  </div>
+
+  
+</div>
 
 

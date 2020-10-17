@@ -1,31 +1,171 @@
 * {
-    display: block;
+  display: block;
+  justify-content: center;
+  margin: 5px auto;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgb(255 0 231);
+  font-weight: 500;
+}
+
+#home {
+  background-image: url("../../../assets/images/home/backgroundImage.jpeg");
+  background-size: fixed;
+  background-repeat:repeat;
+  width:100vw;
+  height: 110vh;
+  min-height:400px;
+  min-height: 400px;
+  /* max-height: 1500px; */
+}
+
+.hidden{
+  display:none;
+}
+
+form {
+  width: 50vw;
+}
+
+#noSignup{
+  border: 3px solid black;
+    border-radius: 39%;
+    width: 70vw;
     justify-content: center;
-    margin: 5px auto;
-    box-sizing: border-box;
-    text-align: center;
+    background-image: linear-gradient(blue 50%,purple 100%);
+    font-size: 0.7em;
+}
+
+button {
+  width: 40vw;
+  height: auto;
+  text-transform: uppercase;
+  color:black;
+  height:3em;
+}
+
+input {
+  width: 40vw;
+  height:3em;
+}
+
+a {
+  margin-top: 15px;
+}
+
+code {
+  display: inline-block;
+  font-weight: 900;
+  background-color: white;
+  color:black;
+}
+
+
+#carrousel {
+border:10px solid black;
+border-radius: 10%;
+background-size: cover;
+height: 30vh;
+width: 84vw;
+  animation: carrousel 12s linear infinite;
+  box-shadow:10px 10px black;
+}
+
+
+
+@keyframes carrousel {
+  0% {
+    background-image: url("../../../assets/images/home/carrousel1.jpeg");
+
+    background-position-x: 0vw;
+    background-position-y: -8vw;
+    background-repeat: no-repeat;
   }
-  
+  33% {
+    background-image: url('../../../assets/images/home/carrousel2.jpeg');
+
+
+    background-position-x: 0vw;
+    background-position-y: -36vw;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background-image: url("../../../assets/images/home/carrousel3.jpeg");
+
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -21vw;
+  }
+  100% {
+    background-image: url("../../../assets/images/home/carrousel1.jpeg");
+
+    background-position-x: 0vw;
+    background-position-y: -8vw;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width:800px){
   form {
-    border: 1px solid black;
-    width: 50vw;
-  }
-  
-  button {
-    width: 70%;
-    height: auto;
-    text-transform: uppercase;
+    width:30vw;
+    background: #1f3bd39e;
   }
 
-  input{
-    width:80%;
+  #home{
+    height:1456px;
+    font-size: 20px;
+    min-height:900px;
   }
 
-  a{
-      margin-top:15px;
+  #carrousel{
+    width:60vw;
+    height:40vw;
+    display:none;
   }
 
-  code{
-    display: inline-block;
-    font-weight: 900;
+  input, button{
+    height:auto;
+    width:29vw;
   }
+
+  #carrosuelDescription p{
+    text-align: left;
+    margin-left:5px;
+  }
+
+  #noSignup{
+    border-radius: 39%;
+    width: 40vw;
+  }
+
+  #carrousel-description{
+    display:block;
+    max-height:900px;
+    font-weight: bold;
+  }
+
+  #picOne, #picThree{
+    width: 250px;
+    height: 250px;
+    clear: left;
+    justify-content: left;
+    float: left;
+    box-shadow: 5px 5px black;
+    border: 5px solid black;
+    border-radius: 10%;
+    margin-left: 10vw;
+  }
+
+  #picTwo{
+    width: 250px;
+    height: 250px;
+    clear: right;
+    justify-content: right;
+    float: right;
+    box-shadow: -5px 5px black;
+    border: 5px solid black;
+    border-radius: 10%;
+    margin-right: 10vw;
+  }
+
+}
