@@ -42,3 +42,8 @@
   color: rgb(235, 91, 91);
 }
 
+.component{
+  margin:0 auto;
+  box-sizing:border-box;
+  min-height:600px;
+}

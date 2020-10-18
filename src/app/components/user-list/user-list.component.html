@@ -1,3 +1,4 @@
+<div class='component'>
 <table>
     <tr>
         <td>No</td>
@@ -8,7 +9,7 @@
         
         <td>{{i+1}}</td>
         <td >{{u.username}}</td>
-        <td><div *ngIf='u.username !== username '>
+        <td><div *ngIf='u.username !== username && !userList[idUser].friends.includes(u.username)'>
             <button (click)='clAddFriend($event)'>Add friend</button>
         </div>
         </td>
@@ -16,3 +17,4 @@
 </table>
 
 <a (click)='clDash()'>Go back to dashboard</a>
+</div>

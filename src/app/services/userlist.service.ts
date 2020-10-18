@@ -32,6 +32,14 @@ export class UserlistService {
         friends: ['aitor'],
         likes: [],
       },
+      {
+        id:4,
+        username: 'dummy',
+        password: 'dummy',
+        email: '',
+        friends: [],
+        likes: [],
+      },
     ];
   }
 }
