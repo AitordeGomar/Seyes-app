@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
 import { AddquestionsComponent } from './components/addquestions/addquestions.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { FriendsListComponent } from './friends-list/friends-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
     SearchComponent,
     AddquestionsComponent,
     UserListComponent,
+    FriendsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
       {path:':username/search',component:SearchComponent},
       {path:':username/add-questions',component:AddquestionsComponent},
       {path:':username/userlist', component:UserListComponent},
+      {path:':username/friendslist', component:FriendsListComponent},
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]),
   ],

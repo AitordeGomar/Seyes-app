@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { QuestionsService } from '../../services/questions.service';
 import { UserlistService } from '../../services/userlist.service';
@@ -82,5 +82,9 @@ export class DashboardComponent implements OnInit {
 
   clAddQuestion() {
     this.router.navigate([this.username, 'add-questions']);
+  }
+
+  clFrList(){
+    this.router.navigate([this.username, 'friendslist'])
   }
 }

@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserlistService {
-
   constructor() {}
 
   userInfo() {
@@ -22,7 +21,7 @@ export class UserlistService {
         username: 'aitor',
         password: 'aitor',
         email: '',
-        friends: [],
+        friends: ['sylwina'],
         likes: [],
       },
       {
@@ -30,7 +29,7 @@ export class UserlistService {
         username: 'sylwina',
         password: 'sylwina92',
         email: '',
-        friends: [],
+        friends: ['aitor'],
         likes: [],
       },
     ];

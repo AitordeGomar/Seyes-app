@@ -9,6 +9,7 @@ import { UserlistService } from '../../services/userlist.service';
 export class UserListComponent implements OnInit {
   username: string;
   userList:{};
+  buttons = document.getElementsByTagName('button');
   constructor(private router: Router,private actRoute: ActivatedRoute,private users: UserlistService) { }
 
   ngOnInit(): void {
@@ -19,4 +20,8 @@ export class UserListComponent implements OnInit {
     this.router.navigate([this.username,'dashboard']);
   }
 
+  clAddFriend(e){
+    console.log(this.buttons)
+    alert(e.curentTarget);
+  }
 }

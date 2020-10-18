@@ -4,10 +4,14 @@
         <td>Username</td>
         <td>Is your friend?</td>
     </tr>
-    <tr *ngFor='let u of userList; let i=index'>
+    <tr *ngFor='let u of userList; let i=index' >
+        
         <td>{{i+1}}</td>
         <td >{{u.username}}</td>
-        <td>{{u.friends}}</td>
+        <td><div *ngIf='u.username !== username '>
+            <button (click)='clAddFriend($event)'>Add friend</button>
+        </div>
+        </td>
     </tr>
 </table>
 

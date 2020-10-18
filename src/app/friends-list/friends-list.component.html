@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>No</td>
+    <td>Username</td>
+  </tr>
+  <tr *ngFor="let u of userList; let i = index">
+    <td>
+      <div
+        *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"
+        style="border: 1px solid black"
+      >
+        {{ i + 1 }}
+      </div>
+    </td>
+    <td>
+      <div
+        *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"
+        style="border: 1px solid black"
+      >
+        {{ u.username }}
+      </div>
+    </td>
+  </tr>
+</table>
+
+<a (click)="clDash()">Go back to dashboard</a>
