@@ -16,9 +16,11 @@ export class DashboardComponent implements OnInit {
   btnQuestion = document.getElementsByClassName('btnQuestion');
   iQuestion = 0;
   iUser = 0;
+  i=0;
   username: string;
   userList = [];
   notAuthenticated: boolean = true;
+  idUser:number;
 
   constructor(
     private router: Router,
@@ -56,6 +58,13 @@ export class DashboardComponent implements OnInit {
         break;
       }
     }
+    for(this.i;this.i<=this.userList.length -1;this.i++){
+      if(this.userList[this.i].username != this.username){
+        continue;
+      }else{
+        this.idUser = this.userList[this.i].id -1;
+      }
+    }
   }
 
   clUserList() {
@@ -86,5 +95,13 @@ export class DashboardComponent implements OnInit {
 
   clFrList(){
     this.router.navigate([this.username, 'friendslist'])
+  }
+  
+  clProfile(){
+    this.router.navigate([this.username, 'profile']);
+  }
+
+  clLikes(){
+    this.router.navigate([this.username, 'likes']);
   }
 }

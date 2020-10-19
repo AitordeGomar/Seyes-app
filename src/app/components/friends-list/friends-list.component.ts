@@ -1,7 +1,6 @@
-import { ConvertActionBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { UserlistService } from '../services/userlist.service';
+import { UserlistService } from '../../services/userlist.service';
 
 @Component({
   selector: 'app-friends-list',
@@ -18,7 +17,6 @@ i=0;
   ngOnInit(): void {
     this.username = this.actRoute.snapshot.params['username'];
     this.userList = this.users.userInfo();
-    console.log(this.userList[1]);
     for(this.i;this.i<=this.userList.length -1;this.i++){
       if(this.userList[this.i].username != this.username){
         continue;
@@ -32,4 +30,9 @@ i=0;
     this.router.navigate([this.username, 'dashboard'])
   }
 
+  duplicate (u) {
+    return this.userList[this.idUser].likes.concat(u).filter((c, index) => {
+      return this.userList[this.idUser].likes.concat(u).indexOf(c) === index;
+    }).length;
+  }
 }

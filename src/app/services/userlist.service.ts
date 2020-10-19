@@ -22,7 +22,7 @@ export class UserlistService {
         password: 'aitor',
         email: '',
         friends: ['sylwina'],
-        likes: [],
+        likes: ['Harry Potter', 'coding','sports'],
       },
       {
         id:3,
@@ -30,7 +30,7 @@ export class UserlistService {
         password: 'sylwina92',
         email: '',
         friends: ['aitor'],
-        likes: [],
+        likes: ['Harry Potter', 'sports'],
       },
       {
         id:4,

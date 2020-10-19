@@ -14,7 +14,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
 import { AddquestionsComponent } from './components/addquestions/addquestions.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { FriendsListComponent } from './friends-list/friends-list.component';
+import { FriendsListComponent } from './components/friends-list/friends-list.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { LikesComponent } from './components/likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { FriendsListComponent } from './friends-list/friends-list.component';
     AddquestionsComponent,
     UserListComponent,
     FriendsListComponent,
+    ProfileComponent,
+    LikesComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,10 +40,13 @@ import { FriendsListComponent } from './friends-list/friends-list.component';
       { path: 'home', component: HomeComponent },
       { path: 'signup', component: LoginComponent },
       { path: ':username/dashboard', component: DashboardComponent },
+      {path:':username/likes',component:LikesComponent},
       {path:':username/search',component:SearchComponent},
       {path:':username/add-questions',component:AddquestionsComponent},
       {path:':username/userlist', component:UserListComponent},
       {path:':username/friendslist', component:FriendsListComponent},
+      {path:':username/profile',component:ProfileComponent},
+      
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]),
   ],

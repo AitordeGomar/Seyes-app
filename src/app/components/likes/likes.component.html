@@ -1,0 +1,29 @@
+<div id='likes' class='component'>
+    <table>
+        <tr>
+          <td>No</td>
+          <td>Topic</td>
+        </tr>
+        <tr *ngFor="let u of userList; let i = index">
+          <td>
+            <div
+              *ngIf='i<userList[idUser].likes.length'
+              style="border: 1px solid black"
+            >
+              {{ i + 1 }}
+            </div>
+          </td>
+          <td>
+            <div
+              *ngIf='i<userList[idUser].likes.length'
+              style="border: 1px solid black"
+            >
+              {{ userList[idUser].likes[i] }}
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+      <a (click)="clDash()">Go back to dashboard</a>
+      
+</div>
