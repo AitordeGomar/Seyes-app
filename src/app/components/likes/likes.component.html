@@ -5,22 +5,18 @@
           <td>Topic</td>
         </tr>
         <tr *ngFor="let u of userList; let i = index">
-          <td>
-            <div
+          <td
               *ngIf='i<userList[idUser].likes.length'
               style="border: 1px solid black"
             >
               {{ i + 1 }}
-            </div>
-          </td>
-          <td>
-            <div
+            </td>
+          <td
               *ngIf='i<userList[idUser].likes.length'
               style="border: 1px solid black"
             >
               {{ userList[idUser].likes[i] }}
-            </div>
-          </td>
+            </td>
         </tr>
       </table>
       

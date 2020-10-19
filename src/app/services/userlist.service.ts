@@ -14,7 +14,7 @@ export class UserlistService {
         password: 'guest',
         email: '',
         friends: ['dummy'],
-        likes: ['sports','coding'],
+        likes: [],
       },
       {
         id:2,

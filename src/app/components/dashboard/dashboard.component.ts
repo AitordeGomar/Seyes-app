@@ -36,6 +36,7 @@ export class DashboardComponent implements OnInit {
     for (this.iQuestion; this.iQuestion <= this.questions.getQuestions().length - 1; this.iQuestion++) {
       this.questionsArray.push(this.questions.getQuestions()[this.iQuestion].question);
     }
+
     this.rand = Math.round(
       Math.random() * (this.questions.getQuestions().length - 1)
     );

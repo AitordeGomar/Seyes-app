@@ -12,28 +12,23 @@
       <td *ngIf="username !== '**'">
         {{ u.username }}
       </td>
-      <td>
-        <div
+      <td
           *ngIf="u.username !== username && username !== '**'"
-          style="border: 1px solid black"
         >
           {{
             (userList[idUser].likes.concat(u.likes).length -
               duplicate(u.likes)) /
               userList[idUser].likes.length | percent
           }}
-        </div>
-      </td>
-      <td>
-        <div
+        </td>
+      <td
           *ngIf="
             u.username !== username &&
             !userList[idUser].friends.includes(u.username)
           "
         >
           <button (click)="clAddFriend($event)">Add friend</button>
-        </div>
-      </td>
+        </td>
     </tr>
   </table>
   <h1>List of topics</h1>

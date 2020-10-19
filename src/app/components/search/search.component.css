@@ -4,6 +4,6 @@ a{
 }
 
 h1{text-align:center;}
-td,tr, table{
+td, table{
     border:1px solid black;
 }
