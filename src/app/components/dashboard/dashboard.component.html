@@ -2,13 +2,10 @@
 <ng-template #authenticated>
 <div id="dashboard" class='component' >
   <div class="nav">
-    <div (click)='clProfile()'>Your profile</div>
+    <div (click)='clProfile()' id='nav-profile'(mouseover)='hover()'>Your profile
     <div (click)='clLikes()'>Your likes</div>
-    <ul style='display:none;'>
-      <li>lorem</li>
-      <li>ipsum</li>
-    </ul>
     <div (click)='clFrList()'>Your friends</div>
+  </div>
     <div (click)='clUserList()'>List of users</div>
   </div>
   <div class="search">

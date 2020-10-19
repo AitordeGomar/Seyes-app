@@ -13,8 +13,8 @@ export class UserlistService {
         username: 'guest',
         password: 'guest',
         email: '',
-        friends: [],
-        likes: [],
+        friends: ['dummy'],
+        likes: ['sports','coding'],
       },
       {
         id:2,
@@ -37,8 +37,8 @@ export class UserlistService {
         username: 'dummy',
         password: 'dummy',
         email: '',
-        friends: [],
-        likes: [],
+        friends: ['guest'],
+        likes: ['Harry Potter'],
       },
     ];
   }

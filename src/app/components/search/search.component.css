@@ -2,3 +2,8 @@ a{
     text-decoration: underline;
     color:blue;
 }
+
+h1{text-align:center;}
+td,tr, table{
+    border:1px solid black;
+}

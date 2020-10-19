@@ -23,17 +23,23 @@ h3 {
   margin-top:3vw;
 }
 
-.nav div {
+.nav div{
   display: inline-block;
   margin: 3px;
   border: 1px solid black;
   text-align: center;
   width: auto;
+  text-align:center;
 }
 
 .nav div:hover{
-  background-color: red;
-  cursor:pointer;
+  visibility:auto;
+  cursor: pointer;
+  background:red;
+}
+
+.navHidden{
+  visibility: hidden;
 }
 
 .search {

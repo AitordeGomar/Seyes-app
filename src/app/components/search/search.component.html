@@ -1,6 +1,58 @@
-<div class='component'>
-<p>search works!</p>
+<div class="component">
+  <h1>List of users</h1>
+  <table>
+    <tr>
+      <td>No</td>
+      <td>Username</td>
+      <td title="paired likes divided by user total likes">% compatibilty</td>
+      <td>Isn't he/she your friend yet?</td>
+    </tr>
+    <tr *ngFor="let u of userList; let i = index">
+      <td *ngIf=" username !== '**'">{{ i + 1 }}</td>
+      <td *ngIf="username !== '**'">
+        {{ u.username }}
+      </td>
+      <td>
+        <div
+          *ngIf="u.username !== username && username !== '**'"
+          style="border: 1px solid black"
+        >
+          {{
+            (userList[idUser].likes.concat(u.likes).length -
+              duplicate(u.likes)) /
+              userList[idUser].likes.length | percent
+          }}
+        </div>
+      </td>
+      <td>
+        <div
+          *ngIf="
+            u.username !== username &&
+            !userList[idUser].friends.includes(u.username)
+          "
+        >
+          <button (click)="clAddFriend($event)">Add friend</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <h1>List of topics</h1>
+  <table>
+    <tr>
+      <td>No</td>
+      <td>Topics</td>
+      <td>Don't you like it yet?</td>
+    </tr>
+    <tr *ngFor="let q of questionsList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ q.question }}</td>
+      <td>
+        <div *ngIf="!userList[idUser].likes.includes(q.question)">
+          <button (click)="clAddTopic($event)">Add Topic</button>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-<a (click)='clDash()'>Go back to dashboard</a>
-
+  <a (click)="clDash()">Go back to dashboard</a>
 </div>
