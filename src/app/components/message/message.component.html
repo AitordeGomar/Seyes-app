@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class='component'>
+<form>
+    <label>Sender</label>
+    <input type='text' [value]="username" readonly/>
+    <label>Receiver</label>
+    <input type='text' [value]="visitedUser" readonly/>
+    <textarea placeholder="Your message here" rows='30' cols='40'></textarea>
+    <button id='messageArea' (click)='sendMessage()'>Send message</button>
+</form>
+
+<div id='ntfMessage' [className]="buttonClicked ? 'show' : 'hidden'">Your message has been sent. You will be redirected to your dashboard</div>
+</div>

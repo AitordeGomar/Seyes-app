@@ -1,5 +1,4 @@
 <div id='likes' class=''>
-  <button (click)="clDash()">Go back to dashboard</button>  
   <table>
         <tr>
           <td>No</td>
@@ -8,13 +7,11 @@
         <tr *ngFor="let u of userList; let i = index">
           <td
               *ngIf='i<userList[idUser].likes.length'
-              style="border: 1px solid black"
             >
               {{ i + 1 }}
             </td>
           <td
               *ngIf='i<userList[idUser].likes.length'
-              style="border: 1px solid black"
             >
               {{ userList[idUser].likes[i] }}
             </td>

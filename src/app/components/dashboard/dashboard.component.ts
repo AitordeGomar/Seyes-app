@@ -68,13 +68,9 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  clUserList() {
-    this.router.navigate([this.username, 'userlist']);
-  }
+  
 
-  logout() {
-    this.router.navigate(['home']);
-  }
+
   click() {
     this.questionsArray.splice(this.rand, 1);
 
@@ -86,23 +82,15 @@ export class DashboardComponent implements OnInit {
     }
     console.log(this.questionsArray);
   }
-  clSearch() {
-    this.router.navigate([this.username, 'search']);
-  }
+  
 
   clAddQuestion() {
     this.router.navigate([this.username, 'add-questions']);
   }
 
-  clFrList(){
-    this.router.navigate([this.username, 'friendslist'])
-  }
   
-  clProfile(){
-    this.router.navigate([this.username, 'profile']);
-  }
+  
+  
 
-  clLikes(){
-    this.router.navigate([this.username, 'likes']);
-  }
+
 }

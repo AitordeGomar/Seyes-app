@@ -1,0 +1,15 @@
+*{
+    display:block;
+}
+
+label{
+    text-align: center;
+}
+
+.show{
+    display:flex;
+}
+
+.hidden{
+    display:none;
+}

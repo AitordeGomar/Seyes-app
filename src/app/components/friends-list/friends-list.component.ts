@@ -13,8 +13,9 @@ username:string;
 idUser:number;
 userList = [];
 i=0;
+btnVisitProfile:boolean = false;
+  public visitedUser:string;
 
-@Input() visitedUser:string;
   constructor(private router:Router, private actRoute: ActivatedRoute, private users: UserlistService) { }
 
   ngOnInit(): void {
@@ -37,5 +38,10 @@ i=0;
     return this.userList[this.idUser].likes.concat(u).filter((c, index) => {
       return this.userList[this.idUser].likes.concat(u).indexOf(c) === index;
     }).length;
+  }
+  goProfile(e){
+    this.visitedUser = e.target.innerText;
+    console.log(this.visitedUser);
+    this.btnVisitProfile = true;
   }
 }

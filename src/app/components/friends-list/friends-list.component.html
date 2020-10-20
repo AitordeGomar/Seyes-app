@@ -1,10 +1,9 @@
 <div class=''>
-  <button (click)="clDash()">Go back to dashboard</button>
 <table>
   <tr style='border:3px solid black;'>
     <td>No</td>
     <td>Username</td>
-    <td title='It calculates the number of paired likes divided by the number of user total likes'>Percent similar</td>
+    <td title='It calculates the number of paired likes divided by the number of user total likes'>Percent similar 🚁</td>
   </tr>
   <tr *ngFor="let u of userList; let i = index">
     <td
@@ -16,7 +15,8 @@
         *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"
 
       >
-        {{ u.username }}
+      <div style='display:inline-block;' (click)=goProfile($event)>{{ u.username }} </div><span>🖱️</span>
+      <div *ngIf='btnVisitProfile && visitedUser == u.username '><app-visitprofile [username]='username' [visitedUser]='visitedUser'></app-visitprofile></div>
       </td>
     <td
         *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"

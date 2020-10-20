@@ -1,19 +1,19 @@
+<app-navbar></app-navbar>
 <div id= 'search' class="component">
-  <button (click)="clDash()">Go back to dashboard</button>
   <h1>List of users</h1>
   <table>
     <tr>
       <td>No</td>
       <td>Username</td>
       <td title="paired likes divided by user total likes">% compatibilty</td>
+      <td title="Shows a 'Match' when someone has the exact list of likes as you">Match 🚁</td>
       <td>Isn't he/she your friend yet?</td>
-      <td>Match</td>
+      
     </tr>
     <tr *ngFor="let u of userList; let i = index">
       <td *ngIf="username !== '**'">{{ i + 1 }}</td>
       <td *ngIf="username !== '**'">
-        <div (click)=goProfile($event)>{{ u.username }}</div>
-        <div *ngIf='btnVisitProfile && visitedUser == u.username '><app-visitprofile [username]='username' [visitedUser]='visitedUser'></app-visitprofile></div>
+        {{ u.username }}
       </td>
       <td
           *ngIf="u.username !== username && username !== '**'"
@@ -23,7 +23,15 @@
               duplicate(u.likes)) /
               userList[idUser].likes.length | percent
           }}
-        </td>
+        </td><td>
+        <div
+          *ngIf="u.username !== username && username !== '**' && 
+          JSON.stringify(userList[idUser].likes.sort()) === JSON.stringify(u.likes.sort())"
+          style='background-color: yellow;border:5px solid black;'
+        >
+          Match
+        </div>
+      </td>
       <td
           *ngIf="
             u.username !== username && username !== '**' &&
@@ -32,13 +40,7 @@
         >
           <button (click)="clAddFriend($event)">Add friend</button>
         </td>
-        <td
-          *ngIf="u.username !== username && username !== '**' && 
-          JSON.stringify(userList[idUser].likes.sort()) === JSON.stringify(u.likes.sort())"
-          style='background-color: yellow;border:5px solid black;'
-        >
-          Match
-        </td>
+        
     </tr>
   </table>
   <h1>List of topics</h1>

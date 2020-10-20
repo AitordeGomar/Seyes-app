@@ -42,4 +42,8 @@ export class UserListComponent implements OnInit {
       }
     },3000)
   }
+  write(i){
+    i=this.userList[i].username;
+    this.router.navigate([this.username, 'writes', i])
+  }
 }

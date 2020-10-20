@@ -29,7 +29,5 @@ export class AddquestionsComponent implements OnInit {
       }, 3000);
     }
   }
-  clDash(){
-    this.router.navigate([this.username , 'dashboard'])
-  }
+  
 }
