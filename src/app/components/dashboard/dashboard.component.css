@@ -105,7 +105,9 @@ button#btnAdd{
   background:red;
 }
 
-
+.nav button{
+  display:inline-block;
+}
 #logout {
   float: right;
   position: fixed;

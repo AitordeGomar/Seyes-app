@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <td>Your friends list</td>
+    </tr>
+    <tr>
+        <table>
+            <tr style='border:3px solid black;'>
+              <td>No</td>
+              <td>Username</td>
+              <td title='It calculates the number of paired likes divided by the number of user total likes'>Percent similar</td>
+            </tr>
+            <tr *ngFor="let u of userList; let i = index">
+              <td
+                  *ngIf="u.username !== visitedUser && visitedUser !== '**' && userList[idVisited].friends.includes(u.username)"
+                >
+                  {{ i + 1 }}
+                </td>
+              <td
+                  *ngIf="u.username !== visitedUser && visitedUser !== '**' && userList[idVisited].friends.includes(u.username)"
+          
+                >
+                  {{ u.username }}
+                </td>
+            </tr>
+          </table>
+    </tr>
+    <tr><td>Your likes</td></tr>
+    <tr>
+        <!-- <td><app-likes></app-likes></td> -->
+    </tr>
+</table>

@@ -9,12 +9,14 @@ import { QuestionsService } from '../../services/questions.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  username: string;
+  public username: string;
   idUser: number;
   userList = [];
   i = 0;
   questionsList = [];
-
+  JSON =JSON;
+  btnVisitProfile:boolean = false;
+  public visitedUser:string;
   
   constructor(
     private router: Router,
@@ -70,5 +72,11 @@ export class SearchComponent implements OnInit {
 
   check(){
     console.log(this.userList[this.idUser].likes.length)
+  }
+
+  goProfile(e){
+    this.visitedUser = e.target.innerText;
+    console.log(this.visitedUser);
+    this.btnVisitProfile = true;
   }
 }

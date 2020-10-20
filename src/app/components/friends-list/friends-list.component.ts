@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { InvokeFunctionExpr } from '@angular/compiler';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { UserlistService } from '../../services/userlist.service';
 
@@ -12,6 +13,8 @@ username:string;
 idUser:number;
 userList = [];
 i=0;
+
+@Input() visitedUser:string;
   constructor(private router:Router, private actRoute: ActivatedRoute, private users: UserlistService) { }
 
   ngOnInit(): void {

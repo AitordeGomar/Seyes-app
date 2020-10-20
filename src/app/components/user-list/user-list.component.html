@@ -1,20 +1,20 @@
 <div class='component'>
+    <button (click)='clDash()'>Go back to dashboard</button>
 <table>
     <tr>
         <td>No</td>
         <td>Username</td>
-        <td>Is your friend?</td>
+        <td>Not your friend yet?</td>
     </tr>
     <tr *ngFor='let u of userList; let i=index' >
         
         <td>{{i+1}}</td>
         <td >{{u.username}}</td>
-        <td><div *ngIf='u.username !== username && !userList[idUser].friends.includes(u.username)'>
+        <td *ngIf='u.username !== username && !userList[idUser].friends.includes(u.username)'>
             <button (click)='clAddFriend($event)'>Add friend</button>
-        </div>
         </td>
     </tr>
 </table>
 
-<a (click)='clDash()'>Go back to dashboard</a>
+
 </div>

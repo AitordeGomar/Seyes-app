@@ -1,8 +1,9 @@
+<button (click)='clDash()'>Go back to Dashboard</button>
 <form id='add-questions' class='component'>
     <label>New topic: </label>
     <input type="text" placeholder='football' [(ngModel)]='input' [ngModelOptions]="{standalone: true}"/>
     <button (click)="questionSent()">Send your question</button>
     <p id='notification' [className]="buttonClicked ? 'show' : 'hidden'">Your question has been sent. We need to validate it so it can take some time to be used</p>
     <br>
-    <button (click)='clDash()'>Go back to Dashboard</button>
+    
 </form>

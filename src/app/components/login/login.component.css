@@ -11,6 +11,16 @@ form {
   width: 50vw;
 }
 
+#signup{
+  background-image: url("../../../assets/images/signup/background.webp");
+  background-size: fixed;
+  background-repeat:repeat;
+  width:100vw;
+  height: 110vh;
+  min-height:400px;
+  min-height: 400px;
+}
+
 button {
   width: 25vw;
   height: 30px;
