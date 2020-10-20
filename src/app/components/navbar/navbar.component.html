@@ -1,4 +1,4 @@
-<div class="nav">
+<div id="navMenu" [ngClass]='isNavActive ? "visible" : "hidden"'>
     <button (click)='clDash()'>Dashboard</button>
     <button (click)='clProfile()' id='nav-profile'>Your profile</button>
     <!-- <button (click)='clLikes()'>Your likes</button>
@@ -6,4 +6,15 @@
     <button (click)='clUserList()'>List of users</button>
     <button (click)="clSearch()">Search</button>
     <button id="logout" (click)="logout()">Log out</button>
+    </div>
+    <div id='loginMenu' [ngClass]='isLoginActive ? "visible" : "hidden"'>
+    <form>
+      <label>Username</label>
+      <input id='currentUser'type="text" [(ngModel)]='username' [ngModelOptions]="{standalone: true}" required placeholder='guest' autofocus>
+      <label>Password</label>
+      <input type="password" [(ngModel)]='userPassword' [ngModelOptions]="{standalone: true}" required placeholder='guest'>
+      <!-- <button type="submit" (submit)='login()'>Log in</button> Submit button-->
+      <button type="submit" (click)='login()'>Log in</button>
+      
+    </form>
   </div>

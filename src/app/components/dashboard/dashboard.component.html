@@ -1,7 +1,6 @@
 <div *ngIf='notAuthenticated; else authenticated'>You dont have permission to see this page</div>
 <ng-template #authenticated>
 <div id="dashboard" class='component' >
-  <app-navbar></app-navbar>
   <h3>Welcome <span>{{username}}</span>, ready for some questions?</h3>
 
   <div>

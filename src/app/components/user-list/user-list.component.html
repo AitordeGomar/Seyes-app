@@ -1,4 +1,3 @@
-<app-navbar></app-navbar>
 <div class="component">
   <table>
     <tr>
@@ -42,7 +41,7 @@
         u.username !== username &&
         !userList[idUser].friends.includes(u.username) && username !== '**'
       ">
-          <button (click)="write(i)">Say Hi</button>
+          <div (click)="write(i)">✉️</div>
         </div>
       </td>
     </tr>

@@ -11,7 +11,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 export class HomeComponent implements OnInit {
   username: String = '';
   userList = [];
-  userPassword: String;
+  
 
   constructor(private router: Router, private users: UserlistService) {}
 
@@ -22,24 +22,7 @@ export class HomeComponent implements OnInit {
   }
   i = 0;
 
-  login() {
-    for (this.i = 0; this.i <= this.userList.length - 1; this.i++) {
-      if (this.username != this.userList[this.i]) {
-        if (this.i >= this.userList.length - 1 || this.username == '') {
-          alert('User not registered. Please sign up instead');
-          break;
-        }
-      } else {
-        if (this.userPassword != this.users.userInfo()[this.i].password) {
-          alert('Wrong password. Please try again');
-          break;
-        } else {
-          this.router.navigate([this.username,'dashboard']);
-          break;
-        }
-      }
-    }
-  }
+
   signup() {
     this.router.navigate(['signup']);
   }

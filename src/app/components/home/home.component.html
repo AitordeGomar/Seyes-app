@@ -1,14 +1,6 @@
+<app-login></app-login>
 <div id='home' class='component'>
-<form>
-    <label>Username</label>
-    <input id='currentUser'type="text" [(ngModel)]='username' [ngModelOptions]="{standalone: true}" required placeholder='guest' autofocus>
-    <label>Password</label>
-    <input type="password" [(ngModel)]='userPassword' [ngModelOptions]="{standalone: true}" required placeholder='guest'>
-    <!-- <button type="submit" (submit)='login()'>Log in</button> Submit button-->
-    <button type="submit" (click)='login()'>Log in</button>
-    <a>Don't you have an account?</a>
-    <button type="button" (click)='signup()'>Sign up now</button>
-  </form>
+
   <div id='noSignup'>
   <div style='text-decoration: underline;'>Dont you want to sign in?</div>
   <p>username: <code>guest</code></p><p> password: <code>guest</code></p>
