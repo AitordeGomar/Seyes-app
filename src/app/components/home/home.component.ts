@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserlistService } from '../../services/userlist.service';
-import {DashboardComponent} from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +10,12 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 export class HomeComponent implements OnInit {
   username: String = '';
   userList = [];
-  
+  newUser: string;
+  newEmail: string;
+  newPassword: string;
+  confirmPassword: string;
 
-  constructor(private router: Router, private users: UserlistService) {}
+  constructor(private users: UserlistService) {}
 
   ngOnInit(): void {
     for (this.i; this.i <= this.users.userInfo().length - 1; this.i++) {
@@ -22,8 +24,25 @@ export class HomeComponent implements OnInit {
   }
   i = 0;
 
-
   signup() {
-    this.router.navigate(['signup']);
+    this.newUser = document.getElementsByTagName('input')[2].value;
+    this.newEmail = document.getElementsByTagName('input')[3].value;
+    this.newPassword = document.getElementsByTagName('input')[4].value;
+    this.confirmPassword = document.getElementsByTagName('input')[5].value;
+    if (
+      this.newUser == '' ||
+      this.newEmail == '' ||
+      this.newPassword == '' ||
+      this.confirmPassword == '' ||
+      this.newPassword != this.confirmPassword
+    ) {
+      if (this.newPassword != this.confirmPassword) {
+        alert('Password are not the same');
+      } else {
+        alert('Not registered. Please try again');
+      }
+    } else {
+      alert('Registered.');
+    }
   }
 }

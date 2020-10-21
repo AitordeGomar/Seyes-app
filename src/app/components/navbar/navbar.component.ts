@@ -20,7 +20,7 @@ isLoginActive:boolean = true;
 
   ngOnInit(): void {
     if(this.actRoute.snapshot.params['username'] !== this.username){
-      this.router.navigate(['home']);
+      this.router.navigate(['forbidden']);
     }
     this.username = this.actRoute.snapshot.params['username'];
     for (this.i; this.i <= this.users.userInfo().length - 1; this.i++) {

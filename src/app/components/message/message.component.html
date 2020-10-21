@@ -1,10 +1,10 @@
 <div class='component'>
 <form>
-    <label>Sender</label>
+    <label>From:</label>
     <input type='text' [value]="username" readonly/>
-    <label>Receiver</label>
+    <label>To:</label>
     <input type='text' [value]="visitedUser" readonly/>
-    <textarea placeholder="Your message here" rows='30' cols='40'></textarea>
+    <textarea placeholder="Your message here" rows='4' cols='50'></textarea>
     <button id='messageArea' (click)='sendMessage()'>Send message</button>
 </form>
 
