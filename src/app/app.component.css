@@ -1,5 +1,14 @@
-h1{
+h1,h3{
     text-align: center;
+    float:right;
+clear:right;
+margin-right:11vw;
+max-width:96vw;
+}
+
+h1{
+    margin-top:5vw;
+    max-width:96vw;
 }
 
 *{text-align: center;}
@@ -8,7 +17,32 @@ h1{
     color:white;
     font-weight: bold;
     text-align:center;
-    font-size:2rem;
+    font-size:1rem;
     float:left;
-    width:100vw;
+    width:96vw;
+    margin-left: 2vw;
   }
+
+  #logo{
+      width:40vw;
+      height:30vw;
+      float:left;
+      clear:left;
+      border:1px solid orange;
+      border-radius: 35%;
+      margin-bottom: 4vw;
+      margin-top: 2vw;
+  }
+
+  @media screen and (min-width:426px){
+    #logo{
+        height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 5px;
+    }
+    h1,h3{
+        margin-top:10px;
+
+    }
+}

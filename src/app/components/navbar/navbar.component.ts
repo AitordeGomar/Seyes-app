@@ -15,6 +15,8 @@ i=0;
 userList = []
 isNavActive:boolean = false;
 isLoginActive:boolean = true;
+document = document;
+confirmOut:boolean = false;
 // authUser:string;
   constructor(private actRoute: ActivatedRoute,private router: Router, private users: UserlistService) { }
 
@@ -47,10 +49,13 @@ isLoginActive:boolean = true;
     this.router.navigate([this.username , 'dashboard'])
   }
   logout() {
+    this.confirmOut =confirm('Are you sure you want to log out?');
+    if(this.confirmOut){
     this.isNavActive = false;
     this.isLoginActive = true;
     this.router.navigate(['home']);
-    this.username = undefined;
+    this.username = undefined;}else{
+    }
   }
   login() {
     for (this.i = 0; this.i <= this.userList.length - 1; this.i++) {

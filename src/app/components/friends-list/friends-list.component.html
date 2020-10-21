@@ -1,16 +1,10 @@
 <div class=''>
 <table>
   <tr style='border:3px solid black;'>
-    <td>No</td>
     <td>Username</td>
     <td title='It calculates the number of paired likes divided by the number of user total likes'>Percent similar 🚁</td>
   </tr>
   <tr *ngFor="let u of userList; let i = index">
-    <td
-        *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"
-      >
-        {{ i + 1 }}
-      </td>
     <td
         *ngIf="u.username !== username && username !== '**' && userList[idUser].friends.includes(u.username)"
 

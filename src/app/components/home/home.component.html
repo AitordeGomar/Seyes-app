@@ -1,6 +1,6 @@
 <div id='home' class='component'>
-
-  <div id='signup'>
+  <button (click)='showSignUp()' [ngClass]="isSignActive ? 'hidden' : 'visible'">Sign up now</button>
+  <div id='signup' [ngClass]="isSignActive ? 'visible' : 'hidden'">
     <form>
         <label>Username</label>
         <input type="text" autofocus>
@@ -16,7 +16,7 @@
     </form>
     </div>
 
-  <div id='noSignup'>
+  <div id='noSignup' [ngClass]="isSignActive ? 'hidden' : 'visible'">
   <div style='text-decoration: underline;'>Dont you want to sign in?</div>
   <p>username: <code>guest</code></p><p> password: <code>guest</code></p>
 </div>

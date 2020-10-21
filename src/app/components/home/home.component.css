@@ -1,7 +1,7 @@
 * {
   display: block;
   justify-content: center;
-  margin: 5px auto;
+  margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
   color: rgb(255 0 231);
@@ -12,10 +12,11 @@
   background-image: url("../../../assets/images/home/backgroundImage.jpeg");
   background-size: fixed;
   background-repeat:repeat;
-  width:100vw;
+  width:96vw;
   height: 110vh;
   min-height:400px;
   min-height: 400px;
+  padding-top: 3vw;
   /* max-height: 1500px; */
 }
 
@@ -23,9 +24,15 @@
   display:none;
 }
 
+#signup{
+  margin-bottom: 3vw;
+}
+
 form {
   width: 50vw;
-  border:1px solid black;
+}
+form *{
+  width: 60vw;
 }
 
 #noSignup{
@@ -35,12 +42,15 @@ form {
     justify-content: center;
     background-image: linear-gradient(blue 50%,purple 100%);
     font-size: 0.7em;
+    margin:5vw auto;
+    margin-bottom: 3vw;
 }
 
 button {
   width: 40vw;
   height: auto;
   text-transform: uppercase;
+  margin-top: 3vw;
   color:black;
   height:3em;
 }
@@ -66,12 +76,19 @@ code {
 border:10px solid black;
 border-radius: 10%;
 background-size: cover;
-height: 54vw;
+height: 82vw;
 width: 84vw;
   animation: carrousel 12s linear infinite;
   box-shadow:10px 10px black;
 }
 
+.visible{
+  display: inline-block;
+}
+
+.hidden{
+  display: none;
+}
 
 
 @keyframes carrousel {
@@ -106,16 +123,15 @@ width: 84vw;
   }
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:426px){
   form {
-    width:30vw;
-    background: #1f3bd39e;
+    width:60vw;
   }
 
   #home{
-    height:1456px;
+    height: 205vh;
     font-size: 20px;
-    min-height:900px;
+    min-height: 900px;
   }
 
   #carrousel{
@@ -131,12 +147,16 @@ width: 84vw;
 
   #carrosuelDescription p{
     text-align: left;
-    margin-left:5px;
+    margin-top: 1vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: justify;
   }
 
   #noSignup{
     border-radius: 39%;
-    width: 40vw;
+    padding: 3vw;
+    width: 80vw;
   }
 
   #carrousel-description{
@@ -146,8 +166,8 @@ width: 84vw;
   }
 
   #picOne, #picThree{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     clear: left;
     justify-content: left;
     float: left;
@@ -158,15 +178,29 @@ width: 84vw;
   }
 
   #picTwo{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     clear: right;
     justify-content: right;
     float: right;
     box-shadow: -5px 5px black;
     border: 5px solid black;
     border-radius: 10%;
+    margin-top: 1vw;
     margin-right: 10vw;
   }
 
+  #signup{
+    margin-bottom: 3vw;
+  }
+
+  .visible{
+    display: block;
+  }
+}
+
+@media screen and (min-width:763px){
+  #home{
+    height:125vh;
+  }
 }

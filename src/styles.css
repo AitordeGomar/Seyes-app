@@ -39,11 +39,11 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
-  color: rgb(235, 91, 91);
 }
 
 .component{
   margin:0 auto;
   box-sizing:border-box;
   min-height:600px;
+  width:96vw;
 }

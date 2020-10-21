@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
   newEmail: string;
   newPassword: string;
   confirmPassword: string;
+  isSignActive:boolean = false;
 
-  constructor(private users: UserlistService) {}
+  constructor(private users: UserlistService, private router:Router) {}
 
   ngOnInit(): void {
     for (this.i; this.i <= this.users.userInfo().length - 1; this.i++) {
@@ -44,5 +45,9 @@ export class HomeComponent implements OnInit {
     } else {
       alert('Registered.');
     }
+  }
+
+  showSignUp(){
+    this.isSignActive = true;
   }
 }

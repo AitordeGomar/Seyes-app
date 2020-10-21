@@ -2,12 +2,19 @@ td{
     border:1px solid black;
 }
 
+#userlist{
+    padding-top: 3vw;
+    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
+    background-position-x: 50vw;
+    background-position-y: 50vh;
+}
+
 div div{
     display:inline-block;
 }
 
-tr:nth-of-type(n+2) td:nth-of-type(3){
-    background-color: red;
+td{
+    background-color: rgb(209, 101, 101);
 }
 
 button{

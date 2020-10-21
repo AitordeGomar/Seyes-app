@@ -1,9 +1,18 @@
 table{
-    width:96vw;
-    border:1px solid black;
-    width:50vw;
+    width:80vw;
 }
 
 td{
     border:1px solid black;
+}
+
+#profile{
+    padding-top: 3vw;
+    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
+    background-position-x: 50vw;
+    background-position-y: 50vh;
+}
+
+td:nth-of-type(1){
+    border:none;
 }

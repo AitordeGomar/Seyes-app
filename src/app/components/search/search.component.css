@@ -3,8 +3,15 @@ a{
     color:blue;
 }
 
+#search{
+    padding-top: 3vw;
+    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
+    background-position-x: 50vw;
+    background-position-y: 50vh;
+}
+
 table{
-    width:96vw;
+    width:86vw;
 }
 
 h1{text-align:center;}
@@ -14,11 +21,15 @@ table{
 }
 
 tr:nth-of-type(2n+1){
-    background-color:green;
+    background-color:rgb(92, 190, 92);
 }
 tr:nth-of-type(1){
-    background-color:pink;
+    background-color:rgb(214, 117, 133);
 }
 tr:nth-of-type(2n){
-    background-color:blue;
+    background-color:rgb(102, 102, 173);
+}
+
+table:nth-of-type(2){
+    margin-bottom: 3vw;
 }

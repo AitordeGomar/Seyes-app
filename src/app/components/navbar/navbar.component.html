@@ -1,3 +1,4 @@
+<div id='navComp'>
 <div id="navMenu" [ngClass]='isNavActive ? "visible" : "hidden"'>
     <button (click)='clDash()'>Dashboard</button>
     <button (click)='clProfile()' id='nav-profile'>Your profile</button>
@@ -7,14 +8,13 @@
     </div>
     <div id='loginMenu' [ngClass]='isLoginActive ? "visible" : "hidden"'>
     <form (ngSubmit)="login()" validate>
-      <label>Username</label>
+      <label>Username </label>
       <input id='currentUser'type="text" [(ngModel)]='username' [ngModelOptions]="{standalone: true}" required placeholder='guest' autofocus>
-      <label>Password</label>
+      <label>Password </label>
       <input type="password" [(ngModel)]='userPassword' [ngModelOptions]="{standalone: true}" required placeholder='guest'>
       <button type="submit">Log in</button> <!-- Submit button -->
       <!-- <button type="submit" (click)='login()'>Log in</button> -->
       
     </form>
   </div>
-
-  <!--  -->
+</div>

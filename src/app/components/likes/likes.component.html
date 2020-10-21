@@ -1,15 +1,9 @@
 <div id='likes' class=''>
   <table>
         <tr>
-          <td>No</td>
           <td>Topic</td>
         </tr>
         <tr *ngFor="let u of userList; let i = index">
-          <td
-              *ngIf='i<userList[idUser].likes.length'
-            >
-              {{ i + 1 }}
-            </td>
           <td
               *ngIf='i<userList[idUser].likes.length'
             >

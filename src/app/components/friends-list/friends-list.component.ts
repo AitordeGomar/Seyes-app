@@ -14,7 +14,7 @@ idUser:number;
 userList = [];
 i=0;
 btnVisitProfile:boolean = false;
-  public visitedUser:string;
+visitedUser:string;
 
   constructor(private router:Router, private actRoute: ActivatedRoute, private users: UserlistService) { }
 

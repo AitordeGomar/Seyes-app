@@ -4,23 +4,20 @@
 }
 
 #dashboard{
-  height:800px;
+  /* height:800px; */
   background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
     background-position-x: 50vw;
     background-position-y: 50vh;
-    min-height:1000px;
+    min-height:600px;
+    width:96vw;
+    padding-top: 3vw;
 }
 
-.nav {
-  border: 1px solid black;
-  width: calc(100vw - 33vw);
-  display: inline-block;
-}
 h3 {
   text-align: center;
   width: 63vw;
   line-break: strict;
-  margin-top:3vw;
+  text-decoration: underline;
 }
 
 .nav div{
@@ -42,14 +39,9 @@ h3 {
   visibility: hidden;
 }
 
-.search {
-  float: right;
-  width: calc(100vw - 73vw);
-}
 
-.search input{
-    width: 20vw;
-}
+
+
 
 button{
     width:60px;
@@ -72,7 +64,8 @@ button#btnAdd{
   margin-left: auto;
   margin-right: auto;
   width: 50vw;
-    font-size:3rem;
+  font-size: 1.8em;
+  font-weight: bolder;
 }
 
 #question::before{
@@ -95,6 +88,9 @@ button#btnAdd{
     align-items: center;
     font-size: 3em;
     font-weight: bold;
+    margin-bottom:4vw;
+    box-shadow: 3px 3px black;
+    border: 5px solid yellow;
 }
 
 .btnQuestion:nth-of-type(1){
@@ -119,4 +115,13 @@ button#btnAdd{
 
 .hidden{
   visibility: hidden;
+}
+
+@media screen and (min-width:426px){
+  .btnQuestion{
+    width:20vw;
+    display:inline-block;
+    height:20vw;
+    margin:10vw;
+  }
 }
