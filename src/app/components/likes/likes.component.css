@@ -8,6 +8,12 @@ tr:nth-of-type(2n){
     background-color:rgb(102, 102, 173);
 }
 table{
-    width:50vw;
+    width:80vw;
     height:auto;
+}
+
+@media screen and (min-width:769px){
+    table{
+        width:40vw;
+    height:auto;}
 }

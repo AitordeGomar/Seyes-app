@@ -4,9 +4,9 @@ td{
 
 #userlist{
     padding-top: 3vw;
-    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
-    background-position-x: 50vw;
-    background-position-y: 50vh;
+}
+table{
+    width:80vw;
 }
 
 div div{
@@ -20,4 +20,13 @@ td{
 button{
     margin-left: auto;
     margin-right:auto;
+}
+
+@media screen and (min-width:769px){
+    td{
+        width:20vw;
+    }
+    table{
+        width:45vw;
+    }
 }

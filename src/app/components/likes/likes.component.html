@@ -1,8 +1,5 @@
 <div id='likes' class=''>
   <table>
-        <tr>
-          <td>Topic</td>
-        </tr>
         <tr *ngFor="let u of userList; let i = index">
           <td
               *ngIf='i<userList[idUser].likes.length'

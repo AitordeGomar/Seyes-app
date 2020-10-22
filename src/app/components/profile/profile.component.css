@@ -1,5 +1,5 @@
 table{
-    width:80vw;
+    width:50vw;
 }
 
 td{
@@ -8,9 +8,6 @@ td{
 
 #profile{
     padding-top: 3vw;
-    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
-    background-position-x: 50vw;
-    background-position-y: 50vh;
 }
 
 td:nth-of-type(1){

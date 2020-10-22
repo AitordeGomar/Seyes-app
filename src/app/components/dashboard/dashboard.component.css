@@ -5,9 +5,6 @@
 
 #dashboard{
   /* height:800px; */
-  background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
-    background-position-x: 50vw;
-    background-position-y: 50vh;
     min-height:600px;
     width:96vw;
     padding-top: 3vw;
@@ -119,9 +116,9 @@ button#btnAdd{
 
 @media screen and (min-width:426px){
   .btnQuestion{
-    width:20vw;
-    display:inline-block;
-    height:20vw;
-    margin:10vw;
+    width: 30vw;
+    display: inline-block;
+    height: 30vw;
+    margin: 9vw;
   }
 }

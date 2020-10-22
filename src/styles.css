@@ -47,3 +47,15 @@
   min-height:600px;
   width:96vw;
 }
+
+.loggedBackground{
+  background-image: radial-gradient(circle at center, white 0, yellow, #add8e666 20%);
+  background-position-x:50vw;
+  background-position-y:50vw;
+}
+
+@media screen and (min-width:769px){
+  .component{
+    width:60vw;
+  }
+}

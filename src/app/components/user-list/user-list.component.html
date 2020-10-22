@@ -1,9 +1,8 @@
-<div id='userlist' class="component">
+<div id='userlist' class="component loggedBackground">
   <table>
     <tr>
       <td>No</td>
       <td>Username</td>
-      <td>Not your friend yet?</td>
       <td>Options</td>
     </tr>
     <tr *ngFor="let u of userList; let i = index">
@@ -26,29 +25,22 @@
     </div>
 </td>
       <td>
-        <div
+        <span
           *ngIf="
             u.username !== username &&
             !userList[idUser].friends.includes(u.username) &&
             username !== '**'
           "
         >
-          <button (click)="clAddFriend($event)">Add friend</button>
-        </div>
-      </td>
-      <td>
-        <div *ngIf="
+          <button (click)="clAddFriend($event)">➕</button>
+      </span>
+
+        <span *ngIf="
         u.username !== username
          && username !== '**'
       ">
-          <div (click)="write(i)">✉️</div>
-        </div>
-        <span *ngIf="
-        u.username !== username &&
-        !userList[idUser].friends.includes(u.username) && username !== '**'
-      ">
-          <span (click)="clAddFriend($event)">➕</span>
-      </span>
+          <span (click)="write(i)">✉️</span>
+    </span>
       </td>
     </tr>
   </table>

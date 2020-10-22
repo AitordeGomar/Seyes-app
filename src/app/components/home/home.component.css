@@ -9,9 +9,9 @@
 }
 
 #home {
-  background-image: url("../../../assets/images/home/backgroundImage.jpeg");
+  /* background-image: url("../../../assets/images/home/backgroundImage.jpeg");
   background-size: fixed;
-  background-repeat:repeat;
+  background-repeat:repeat; */
   width:96vw;
   height: 110vh;
   min-height:400px;
@@ -40,7 +40,7 @@ form *{
     border-radius: 39%;
     width: 70vw;
     justify-content: center;
-    background-image: linear-gradient(blue 50%,purple 100%);
+    background-image: linear-gradient(#ffc107f2 50%,purple 100%);
     font-size: 0.7em;
     margin:5vw auto;
     margin-bottom: 3vw;
@@ -129,7 +129,7 @@ width: 84vw;
   }
 
   #home{
-    height: 205vh;
+    height: 183vh;
     font-size: 20px;
     min-height: 900px;
   }
@@ -196,11 +196,5 @@ width: 84vw;
 
   .visible{
     display: block;
-  }
-}
-
-@media screen and (min-width:763px){
-  #home{
-    height:125vh;
   }
 }

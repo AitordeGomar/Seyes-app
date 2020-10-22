@@ -13,7 +13,7 @@ export class UserlistService {
         username: 'guest',
         password: 'guest',
         email: '',
-        friends: ['dummy'],
+        friends: ['dummy','aitor', 'sylwina'],
         likes: ['sports'],
       },
       {
@@ -21,7 +21,7 @@ export class UserlistService {
         username: 'aitor',
         password: 'aitor',
         email: '',
-        friends: ['sylwina'],
+        friends: ['sylwina', 'guest'],
         likes: ['Harry Potter', 'coding','sports'],
       },
       {
@@ -29,7 +29,7 @@ export class UserlistService {
         username: 'sylwina',
         password: 'sylwina92',
         email: '',
-        friends: ['aitor'],
+        friends: ['aitor','guest'],
         likes: ['Harry Potter', 'sports'],
       },
       {

@@ -5,9 +5,6 @@ a{
 
 #search{
     padding-top: 3vw;
-    background-image: radial-gradient(circle at center, white 0, yellow, lightblue 20%);
-    background-position-x: 50vw;
-    background-position-y: 50vh;
 }
 
 table{
@@ -32,4 +29,13 @@ tr:nth-of-type(2n){
 
 table:nth-of-type(2){
     margin-bottom: 3vw;
+}
+
+@media screen and (min-width:769px){
+    td{
+        width:20vw;
+    }
+    table{
+        width:45vw;
+    }
 }

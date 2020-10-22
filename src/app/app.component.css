@@ -6,6 +6,12 @@ margin-right:11vw;
 max-width:96vw;
 }
 
+#app{
+    background-image: url("../assets/images/home/backgroundImage.jpeg");
+  background-size: fixed;
+  background-repeat:repeat;
+  max-height: 2000px;
+}
 h1{
     margin-top:5vw;
     max-width:96vw;
@@ -44,5 +50,11 @@ h1{
     h1,h3{
         margin-top:10px;
 
+    }
+}
+
+@media screen and (min-width:769px){
+    .component{
+        width:70vw;
     }
 }
