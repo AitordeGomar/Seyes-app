@@ -37,7 +37,7 @@
             !userList[idUser].friends.includes(u.username)
           "
         >
-          <button (click)="clAddFriend($event)">Add friend</button>
+          <button (click)="clAddFriend($event)">➕</button>
         </td>
         
     </tr>
@@ -54,11 +54,11 @@
       <td *ngIf="username !== '**'">{{ q.question }}</td>
       <td>
         <div *ngIf="!userList[idUser].likes.includes(q.question)">
-          <button (click)="clAddTopic($event)">Add Topic</button>
+          <button (click)="clAddTopic($event)">📚</button>
         </div>
       </td>
     </tr>
   </table>
 
-  
+  <div class='info'>ℹ️ Match? Does someone likes exactly the same as you?</div>
 </div>

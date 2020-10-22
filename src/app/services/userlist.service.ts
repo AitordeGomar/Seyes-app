@@ -13,8 +13,8 @@ export class UserlistService {
         username: 'guest',
         password: 'guest',
         email: '',
-        friends: ['dummy','aitor', 'sylwina'],
-        likes: ['sports'],
+        friends: ['dummy','aitor', 'sylwina','John92','Mary6','Arek'],
+        likes: ['sports','reading', 'listening to music', 'playing games'],
       },
       {
         id:2,
@@ -30,7 +30,7 @@ export class UserlistService {
         password: 'sylwina92',
         email: '',
         friends: ['aitor','guest'],
-        likes: ['Harry Potter', 'sports'],
+        likes: ['Harry Potter', 'sports','Game of Thrones'],
       },
       {
         id:4,
@@ -38,14 +38,14 @@ export class UserlistService {
         password: 'dummy',
         email: '',
         friends: ['guest'],
-        likes: ['coding','sports'],
+        likes: ['coding','sports', 'reading'],
       },
       {
         id:5,
         username: 'John92',
         password: 'john92',
         email: '',
-        friends: ['dummy','Arek'],
+        friends: ['dummy','Arek','guest'],
         likes: ['sports','coding'],
       },
       {
@@ -53,7 +53,7 @@ export class UserlistService {
         username: 'Mary6',
         password: 'mary6',
         email: '',
-        friends: ['sylwina'],
+        friends: ['sylwina','guest'],
         likes: ['Harry Potter', 'coding','sports','reading'],
       },
       {
@@ -61,7 +61,7 @@ export class UserlistService {
         username: 'Arek',
         password: 'arek',
         email: '',
-        friends: ['Mary6','aitor'],
+        friends: ['Mary6','aitor','guest'],
         likes: ['Harry Potter'],
       },
       {

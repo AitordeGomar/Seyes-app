@@ -4,7 +4,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
-  color: rgb(255 0 231);
+
   font-weight: 500;
 }
 
@@ -13,11 +13,17 @@
   background-size: fixed;
   background-repeat:repeat; */
   width:96vw;
-  height: 110vh;
+  height: 85vh;
   min-height:400px;
   min-height: 400px;
   padding-top: 3vw;
   /* max-height: 1500px; */
+}
+
+button:nth-of-type(1){
+  background-image:radial-gradient(white 0,grey 100%);
+  animation:nosignup 1s infinite alternate-reverse linear;
+  cursor: pointer;
 }
 
 .hidden{
@@ -37,10 +43,9 @@ form *{
 
 #noSignup{
   border: 3px solid black;
-    border-radius: 39%;
     width: 70vw;
     justify-content: center;
-    background-image: linear-gradient(#ffc107f2 50%,purple 100%);
+    background-image: linear-gradient(#ffc107f2 50%,green 100%);
     font-size: 0.7em;
     margin:5vw auto;
     margin-bottom: 3vw;
@@ -90,6 +95,10 @@ width: 84vw;
   display: none;
 }
 
+.info{
+  display: none;
+}
+
 
 @keyframes carrousel {
   0% {
@@ -123,7 +132,13 @@ width: 84vw;
   }
 }
 
-@media only screen and (min-width:426px){
+@keyframes nosignup{
+  0%{background-image:radial-gradient(white 0%,grey 100%)}
+  50%{background-image:radial-gradient(grey 0%, white 50%,grey 100%)}
+  100%{background-image:radial-gradient(grey 0%,white 100%)}
+}
+
+@media only screen and (min-width:426px)and (max-width:768px){
   form {
     width:60vw;
   }
@@ -140,10 +155,10 @@ width: 84vw;
     display:none;
   }
 
-  input, button{
+  /* input, button{
     height:auto;
     width:29vw;
-  }
+  } */
 
   #carrosuelDescription p{
     text-align: left;
@@ -154,10 +169,11 @@ width: 84vw;
   }
 
   #noSignup{
-    border-radius: 39%;
-    padding: 3vw;
-    width: 80vw;
-  }
+    padding: 0vw;
+    width: 208px;
+    height: 74px;
+    margin-top: 1vw;
+}
 
   #carrousel-description{
     display:block;
@@ -197,4 +213,110 @@ width: 84vw;
   .visible{
     display: block;
   }
+  /* button:nth-of-type(1){
+    height: 90px;
+      width: 322px;
+  } */
+  .info{
+    display: block;
+    border:3px solid black;
+    background-color:black; 
+    color:white;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 769px){
+  #picOne, #picThree, #picThree{
+    clear:both;
+  }
+
+form {
+  width:60vw;
+}
+
+#noSignup{
+  padding: 0vw;
+  width: 208px;
+  height: 74px;
+  margin-top: 1vw;
+  display:inline-block;
+}
+
+/* button:nth-of-type(1){
+  height: 90px;
+    width: 322px;
+    height: 90px;
+} */
+
+#home{
+  height: 100vh;
+  font-size: 20px;
+  min-height: 639px;
+  padding-top: 0vw;
+}
+
+#carrousel{
+  width:60vw;
+  height:40vw;
+  display:none;
+}
+
+/* input, button{
+  height:auto;
+  width:29vw;
+} */
+
+#carrosuelDescription p{
+  text-align: left;
+  margin-top: 1vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: justify;
+}
+
+#carrousel-description{
+  display:block;
+  max-height:900px;
+  font-weight: bold;
+}
+
+#picOne, #picThree{
+  width: 100px;
+  height: 100px;
+  justify-content: left;
+  float: left;
+  box-shadow: 5px 5px black;
+  border: 5px solid black;
+  border-radius: 10%;
+  margin-left: 10vw;
+}
+
+#picTwo{
+  width: 100px;
+  height: 100px;
+  justify-content: right;
+  float: right;
+  box-shadow: -5px 5px black;
+  border: 5px solid black;
+  border-radius: 10%;
+  margin-top: 1vw;
+  margin-right: 10vw;
+}
+
+#signup{
+  margin-bottom: 3vw;
+}
+
+.visible{
+  display: block;
+}
+.info{
+  display: block;
+  border:3px solid black;
+  background-color:black; 
+  color:white;
+  font-size: 0.8em;
+}
+
 }

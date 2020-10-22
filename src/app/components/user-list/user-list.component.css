@@ -22,6 +22,14 @@ button{
     margin-right:auto;
 }
 
+.info{
+    display: block;
+    border:3px solid black;
+    background-color:black; 
+    color:white;
+    font-size: 0.8em;
+}
+
 @media screen and (min-width:769px){
     td{
         width:20vw;

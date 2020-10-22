@@ -44,9 +44,10 @@ input {
   font-weight: bold;
 }
 #navMenu *:hover {
-  animation: reluctant 750ms infinite linear;
-  font-size: 1.5em;
+  animation: reluctant 750ms linear;
+  animation-iteration-count: 1;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 #logout {
@@ -127,18 +128,18 @@ input {
   }
 }
 
-@media screen and (min-width: 769px) {
-  form button {
+@media screen and (min-width: 769px){
+
+    #navComp {
+        padding-bottom: 10px;
+      }
+    form button {
     width: 20vw;
     margin-left: 3vw;
   }
 
   #loginMenu * {
     display: inline-block;
-  }
-
-  #navMenu {
-    height: 200px;
   }
 
   #navMenu * {

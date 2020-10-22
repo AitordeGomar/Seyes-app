@@ -56,7 +56,7 @@ export class SearchComponent implements OnInit {
       if (Math.random() <= 0.5) {
         e.target.style.display = 'none';
       } else {
-        e.target.innerText = 'Add friend';
+        e.target.innerText = '➕';
         e.target.style.background = '';
       }
     }, 3000);

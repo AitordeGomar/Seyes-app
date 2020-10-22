@@ -1,5 +1,5 @@
 <div id='home' class='component'>
-  <button (click)='showSignUp()' [ngClass]="isSignActive ? 'hidden' : 'visible'">Sign up now</button>
+  <button id='gotoSign' (click)='showSignUp()' [ngClass]="isSignActive ? 'hidden' : 'visible'">Sign up now</button>
   <div id='signup' [ngClass]="isSignActive ? 'visible' : 'hidden'">
     <form>
         <label>Username</label>
@@ -33,6 +33,7 @@
     <img id='picThree'  src='../../../assets/images/home/carrousel3.jpeg' alt="" srcset="">
     <p style='margin-right: 10vw;'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium quo voluptatem exercitationem impedit, porro fugit quia labore dolorem nam odio.</p>
   </div>
+  <div class='info'>ℹ️ Come here through a mobile phone to see pictures in a carrousel presentation</div>
 </div>
 
 

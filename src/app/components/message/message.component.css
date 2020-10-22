@@ -1,7 +1,13 @@
 *{
     display:block;
 }
-
+#ntfMessage{
+    border:3px solid black;
+    justify-content: center;
+    width:50vw;
+    z-index:1;
+    box-shadow:3px 3px black;
+}
 #message{
     padding-top: 3vw;
 }

@@ -1,7 +1,7 @@
+<div id='visitProfile'>
 <table>
   <tr style='border:3px solid black;'>
     <td style='font-weight: bold;'>Friends</td>
-    <td style='font-weight: bold;'>Topic</td>
   </tr>
   <tr *ngFor="let u of userList; let i = index">
     <td>
@@ -10,11 +10,18 @@
       >
         {{ u.username }}
   </div></td>
-  <td>
-      <div
+</tr>
+</table>
+<table>
+  <tr style='border:3px solid black;'>
+    <td style='font-weight: bold;'>Topic</td>
+  </tr>
+  <tr *ngFor="let u of userList; let i = index">
+  <td
         *ngIf='i<userList[idVisited].likes.length'
       >
         {{ userList[idVisited].likes[i] }}
-</div></td>
+</td>
 </tr>
 </table>
+</div>

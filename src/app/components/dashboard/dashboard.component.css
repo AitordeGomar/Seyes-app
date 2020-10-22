@@ -36,7 +36,13 @@ h3 {
   visibility: hidden;
 }
 
-
+#infoDash{
+  display: block;
+  border:3px solid black;
+  background-color:black; 
+  color:white;
+  font-size: 0.8em;
+}
 
 
 
@@ -48,10 +54,10 @@ button#logout{
     width:auto;
 }
 
-button#btnAdd{
+#btnAdd{
   border-radius:50%;
   position: fixed;
-  top:calc(100vh - 10vw);
+  top: 51vh;
   right:0;
   height:50px;
   width:50px;
@@ -116,9 +122,28 @@ button#btnAdd{
 
 @media screen and (min-width:426px){
   .btnQuestion{
-    width: 30vw;
+    width: 200px;
     display: inline-block;
-    height: 30vw;
+    height: 200px;
     margin: 9vw;
+  }
+
+  #dashboard{
+    width:96vw;
+  }
+}
+
+@media screen and (min-width:769px){
+  #dashboard{width:60vw;}
+
+  .btnQuestion{
+    display: inline-block;
+    width: 26vw;
+    height: 26vw;
+    margin: 10vw 2vw;
+  }
+
+  #btnAdd{
+    right: 8vw;
   }
 }

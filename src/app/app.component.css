@@ -4,6 +4,7 @@ h1,h3{
 clear:right;
 margin-right:11vw;
 max-width:96vw;
+text-decoration: underline;
 }
 
 #app{
@@ -49,12 +50,23 @@ h1{
     }
     h1,h3{
         margin-top:10px;
-
     }
+}
+@media screen and (min-width:427px)and (max-width:768px){
+    h1,h3{letter-spacing: 2vw;
+    font-weight: 900;}
+    }
+
+@media screen and (min-width:427px){
+ #logo{margin-bottom: 0vw;}
+
 }
 
 @media screen and (min-width:769px){
     .component{
         width:70vw;
+    }
+    h1,h3{
+    letter-spacing: 9px;
     }
 }
